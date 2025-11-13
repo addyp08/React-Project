@@ -9,33 +9,33 @@ export default function KnowMore() {
   const tutors = [
     {
       name: "Shubham Bandal",
-      expertise: "Goli Specialist",
-      experience: "1+ years",
-      skills: "DGAF Techniques,No Water Goli Application, Autism Handling",
+      expertise: "Web Development",
+      experience: "8+ years",
+      skills: "React, Node.js, Tailwind CSS",
       approach: "Hands-on projects and real-world applications",
       img: tutor1
     },
     {
       name: "Kushal",
-      expertise: "Flirting + YD",
-      experience: "4+ years",
-      skills: "Charm Offensive, Kachi Maggi, Blowback Techniques",
-      approach: "Interact bihari and predictive modeling",
+      expertise: "Data Science",
+      experience: "6+ years",
+      skills: "Python, Machine Learning, AI",
+      approach: "Interactive dashboards and predictive modeling",
       img: tutor2
     },
     {
       name: "Tage",
-      expertise: "Salt in rice",
-      experience: "6+ years",
-      skills: "Last 3 drags, acting straight, Ahbhal",
+      expertise: "Cyber Security",
+      experience: "10+ years",
+      skills: "Ethical Hacking, Network Security",
       approach: "Immersive simulations and threat analysis",
       img: tutor3
     },
     {
       name: "Addy",
-      expertise: "Eating",
-      experience: "22+ years",
-      skills: "Infinite hunger, Rolling perfect J, sleep deprivation",
+      expertise: "Cloud Computing",
+      experience: "7+ years",
+      skills: "AWS, Azure, Cloud Architecture",
       approach: "Guided labs and futuristic deployment strategies",
       img: tutor4
     }
@@ -75,4 +75,5 @@ export default function KnowMore() {
       </div>
     </section>
   );
+
 }
