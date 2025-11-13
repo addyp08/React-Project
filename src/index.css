@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+@import "tailwindcss";
+
+.bg-animated-gradient {
+  background: linear-gradient(270deg, #9333ea, #0f172a, #d30d70);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+}
+
+.bg-animatedR-gradient {
+  background: linear-gradient(270deg, #d30d70, #0f172a, #9333ea);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.text-glow {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7),
+               0 0 10px rgba(255, 255, 255, 0.5),
+               0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.nav-item {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.nav-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* lighter glass */
+  backdrop-filter: blur(8px);
+  transition: left 0.4s ease;
+  z-index: 0; /* stays behind text */
+}
+
+.nav-item:hover::before {
+  left: 0;
+}
+
+.nav-item span {
+  position: relative;
+  z-index: 1; /* text above glass */
+  display:inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-item:hover span {
+  transform: scale(1.15); /* pop effect */
+  color: #fff; /* optional highlight */
+}
+
+.stars {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: moveStars 5s linear infinite;
+}
+
+@keyframes moveStars {
+  0% {
+    background-position: 0 0;
+    opacity: 0;
+  }
+  50% {
+    background-position: 100px 100px;
+    opacity: 2;
+  }
+  100% {
+    background-position: 200px 200px;
+    opacity: 0;
+  }
+}
+
+.futuristic-bg {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #9333ea);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  position: relative;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.neon-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blog-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+.card {
+  position: absolute;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.card:nth-child(1) { top: 0; left: 0; }
+.card:nth-child(2) { top: 60px; left: 60px; }
+.card:nth-child(3) { top: 120px; left: 120px; }
+.card:nth-child(4) { top: 180px; left: 180px; }
+
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.6);
+}
+
+
+.blog-page {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #9333ea);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    position: static !important;
+    margin-bottom: 20px;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+  }
+}
+
+
+button {
+  position: relative;
+  border: 2px solid rgba(255,255,255,0.3);
+  transition: border 0.4s ease;
+}
+
+button:hover {
+  border-color: #9333ea; /* Neon purple glow */
+  box-shadow: 0 0 15px #9333ea, 0 0 30px #d30d70; /* Glow only on border */
+}
+
+
+
+.nav-item span a {
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  letter-spacing: 0.3px; /* Edgy spacing */
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-item span a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #9333ea, #d30d70);
+  transition: width 0.4s ease;
+}
+
+.nav-item span a:hover::after {
+  width: 100%; /* Neon underline on hover */
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
